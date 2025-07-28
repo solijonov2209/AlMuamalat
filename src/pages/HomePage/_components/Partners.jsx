@@ -4,7 +4,7 @@ import WesternUnion from '../../../assets/svg/westrnunion.svg';
 import Klarna from '../../../assets/svg/klarna.svg';
 import Skrill from '../../../assets/svg/Skrill.svg';
 import Stripe from '../../../assets/svg/Stripe.svg';
-import Amazon from '../../../assets/svg/amazon.svg';
+import Amazon from '../../../assets/svg/Amazon.svg';
 
 export const Partners = () => {
   const partners = [Amerikan, WesternUnion, Klarna, Skrill, Stripe, Amazon];
