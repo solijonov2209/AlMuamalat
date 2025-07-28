@@ -1,0 +1,27 @@
+.name-input {
+  background-image: url('../../assets/svg/user.svg');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 18px) center;
+  background-size: 24px;
+}
+.register-text {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #8f8f8f;
+  margin-bottom: 80px;
+  margin-top: 0;
+}
+.register-link {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 26px;
+  color: #009688;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: none;
+}
