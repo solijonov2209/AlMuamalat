@@ -6,9 +6,6 @@ import { Contact } from './pages/Contact/Contact';
 import { SignIn } from './pages/AuthPage/SignIn/SignIn';
 import { Register } from './pages/AuthPage/Register/Register';
 import { International } from './pages/Programs/International';
-import { Specialized } from './pages/Programs/Specialized';
-import { IslamicFinance } from './pages/Programs/IslamicFinance';
-import { Certification } from './pages/Programs/Certification';
 import { Finance } from './pages/Finance/Finance';
 import { UserProfile } from './pages/UserProfile/UserProfile';
 import { UserInfo } from './pages/UserProfile/_components/UserInfo';
@@ -22,9 +19,6 @@ const AppRoutes = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/finance-tools" element={<Finance />} />
       <Route path="/programs/:id" element={<International />} />
-      <Route path="/programs/specialized" element={<Specialized />} />
-      <Route path="/programs/islamic-finance" element={<IslamicFinance />} />
-      <Route path="/programs/certification" element={<Certification />} />
       <Route path="/user-profile" element={<UserProfile />}>
         <Route index element={<Navigate to="info" replace />} />
         <Route path="info" element={<UserInfo />} />
