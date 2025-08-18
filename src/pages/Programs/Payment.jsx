@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useMutation, useQuery } from 'react-query';
 import tick from '../../assets/Vector.png';
 import greenImg from '../../assets/yashilnuqta.png';
@@ -34,13 +36,18 @@ const {mutate} = useMutation({
   }
 })
 
-const onSubmit = ()=>{
-  const submitData={
-    course_id: id,
-    user_id: data?.user_id
+const onSubmit = () => {
+  if (!data?.user_id) {
+    toast.error("Iltimos, kursni sotib olish uchun ro‘yxatdan o‘ting!");
+    return;
   }
-  mutate(submitData)
-}
+
+  const submitData = {
+    course_id: id,
+    user_id: data.user_id,
+  };
+  mutate(submitData);
+};
   return (
     <section>
       {/* --- START PAYMENT SECTION --- */}
