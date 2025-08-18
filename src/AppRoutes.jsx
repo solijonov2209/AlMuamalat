@@ -21,15 +21,14 @@ const AppRoutes = () => {
       <Route path="/signin" element={<SignIn />} />
       <Route path="/register" element={<Register />} />
       <Route path="/finance-tools" element={<Finance />} />
-      <Route path="/programs/international" element={<International />} />
+      <Route path="/programs/:id" element={<International />} />
       <Route path="/programs/specialized" element={<Specialized />} />
       <Route path="/programs/islamic-finance" element={<IslamicFinance />} />
       <Route path="/programs/certification" element={<Certification />} />
-      <Route path="/user-profile" element={<UserProfile />} >
-      <Route index element={<Navigate to="info" replace />} />
-        <Route path="info" element={<UserInfo/>} />
-        <Route path="courses" element={<UserCourses/>} />
-
+      <Route path="/user-profile" element={<UserProfile />}>
+        <Route index element={<Navigate to="info" replace />} />
+        <Route path="info" element={<UserInfo />} />
+        <Route path="courses" element={<UserCourses />} />
       </Route>
     </Routes>
   );

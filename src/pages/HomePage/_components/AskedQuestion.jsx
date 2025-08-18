@@ -44,7 +44,7 @@ export const AskedQuestion = () => {
           {/* Left Column: 2 items */}
           <div className=" flex flex-col gap-4 flex-1">
             {data.slice(0, 2).map((faq, index) => (
-              <details 
+              <details
                 key={index}
                 open={index === 0} // faqat birinchi elementga "open"
                 className="group border rounded-lg p-4 transition-all duration-300 open:shadow-lg open:border-green-400 bg-white"

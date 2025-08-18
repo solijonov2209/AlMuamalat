@@ -4,12 +4,17 @@ import './index.css';
 import App from './App.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <ToastContainer />
-      <App />
+      <QueryClientProvider client={queryClient}>
+        <ToastContainer />
+        <App />
+      </QueryClientProvider>
     </BrowserRouter>
   </StrictMode>
 );
