@@ -1,6 +1,46 @@
+import { useMutation, useQuery } from 'react-query';
 import tick from '../../assets/Vector.png';
 import greenImg from '../../assets/yashilnuqta.png';
-export const Payment = () => {
+import { request } from '../../services/Request';
+export const Payment = ({id, price}) => {
+
+const {data} = useQuery({
+ queryKey:"userData",
+ queryFn: async ()=>{
+  const data = await request.get("users/me")
+  return data?.data?.data
+ }
+})
+const {mutate} = useMutation({
+  mutationKey:"coursePost",
+  mutationFn: async (submitData)=>{
+    await request.post("/courses/user", submitData)
+    .then((res)=>{
+      request.get(`/courses/purchase/${res?.data?.data?.id}`)
+      .then((response)=>{
+           const url = response?.data?.data?.data
+           if(url){
+            const aTag = document.createElement("a");
+            aTag.href= url;
+            aTag.target="_blank";
+            aTag.rel = "noopener noreferrer";
+            document.body.appendChild(aTag);
+            aTag.click();
+           }
+           
+      })
+     
+    })
+  }
+})
+
+const onSubmit = ()=>{
+  const submitData={
+    course_id: id,
+    user_id: data?.user_id
+  }
+  mutate(submitData)
+}
   return (
     <section>
       {/* --- START PAYMENT SECTION --- */}
@@ -131,10 +171,27 @@ export const Payment = () => {
                 Personalized one-to-one training
               </span>
             </div>
+            <div>
+              <img
+                src={greenImg}
+                alt="Personalized Icon"
+                className="inline-block mr-2"
+              />
+              <span className=" text-red-700  font-normal text-[15px] md:text-[18px] leading-[100%] tracking-[-0.02em] align-middle">
+               Course price: {(price)?price:"kursga qabul mavjud emas"}
+              </span>
+            </div>
           </div>
-          <button className="mt-6 w-[222px] py-4 cursor-pointer bg-[#009688] text-white  rounded hover:bg-teal-700 transition duration-300 font-bold text-[18px] leading-[100%] tracking-normal">
-            Purchase Now
-          </button>
+          <button
+  type="submit"
+  onClick={onSubmit}
+  disabled={!price}
+  className={`mt-6 w-[222px] py-4 cursor-pointer bg-[#009688] text-white rounded hover:bg-teal-700 transition duration-300 font-bold text-[18px] leading-[100%] tracking-normal ${
+    !price ? 'opacity-50 cursor-not-allowed hover:bg-[#009688]' : ''
+  }`}
+>
+  Purchase Now
+</button>
         </div>
       </div>
       {/* --- FINISH PAYMENT SECTION --- */}

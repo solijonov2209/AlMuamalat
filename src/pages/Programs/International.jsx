@@ -16,7 +16,7 @@ export const International = () => {
     },
   });
   const courseAboutData = data?.find((item) => item?.course_id === id);
-  console.log(courseAboutData);
+
 
   return (
     <div>
@@ -110,7 +110,7 @@ export const International = () => {
               </div>
               {/* --- Course info  Section --- FINISH*/}
               <CoursesCarousel /> {/* MOST POPULATION CARDS */}
-              <Payment />
+              <Payment  id = {id} price={courseAboutData?.price}/>
             </div>
           </div>
         </div>

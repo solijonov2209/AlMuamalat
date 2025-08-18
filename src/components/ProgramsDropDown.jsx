@@ -11,8 +11,6 @@ export function ProgramsDropDown() {
     },
   });
 
-  console.log(data);
-
   return (
     <ul className="dropdown-list">
       {data?.map((course, index) => (
