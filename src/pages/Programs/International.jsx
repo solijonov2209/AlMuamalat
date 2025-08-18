@@ -81,7 +81,6 @@ export const International = () => {
                 </ul>
               </div>
             </div>
-            
 
             <div className="px-4 py-12">
               <h2 className="text-3xl font-bold text-[#0a2d3c] mb-8">
@@ -109,10 +108,9 @@ export const International = () => {
                   </p>
                 </div>
               </div>
-{/* --- Course info  Section --- FINISH*/}
+              {/* --- Course info  Section --- FINISH*/}
               <CoursesCarousel /> {/* MOST POPULATION CARDS */}
-              <Payment/>
-            
+              <Payment />
             </div>
           </div>
         </div>
