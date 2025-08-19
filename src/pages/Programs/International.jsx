@@ -5,6 +5,7 @@ import { request } from '../../services/Request';
 import { CheckCircle2 } from 'lucide-react';
 import { CoursesCarousel } from './PopularCourseCard';
 import { Payment } from './Payment';
+import { Consultation } from '../HomePage/_components/Consultation';
 export const International = () => {
   const { id } = useParams();
 
@@ -111,6 +112,7 @@ export const International = () => {
               {/* --- Course info  Section --- FINISH*/}
               <CoursesCarousel /> {/* MOST POPULATION CARDS */}
               <Payment  id = {id} price={courseAboutData?.price}/>
+              <Consultation/>
             </div>
           </div>
         </div>
