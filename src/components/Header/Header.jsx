@@ -1,115 +1,179 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import logo from '../../assets/svg/Logo.svg';
-import { ProgramsDropDown } from '../ProgramsDropDown';
-import './header.css';
-import LanguageSwitcher from '../LanguageSelector';
-import { FaUserCircle } from 'react-icons/fa';
-import { FiLogOut } from 'react-icons/fi';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../../assets/svg/Logo.svg";
+import { ProgramsDropDown } from "../ProgramsDropDown";
+import LanguageSwitcher from "../LanguageSelector";
+import { FaUserCircle } from "react-icons/fa";
+import { FiLogOut } from "react-icons/fi";
+import { HiMenu, HiX } from "react-icons/hi";
 
 export const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const [token, setToken] = useState(localStorage.getItem('testUserToken'));
+  const [token, setToken] = useState(localStorage.getItem("testUserToken"));
   const navigate = useNavigate();
+
   const handleLogout = () => {
-    localStorage.removeItem('testUserToken');
+    localStorage.removeItem("testUserToken");
     setToken(null);
-    navigate('/');
+    navigate("/");
   };
 
   return (
-    <>
-      <header className="header">
-        <div className="container">
-          <div className="header-wrapper">
-            <div className="log">
-              <Link to="/" className="site-logo">
-                <img className="site-logo_img" src={logo} alt="site-logo" />
-              </Link>
-            </div>
-            <nav>
-              <ul className="nav-list">
-                <li className="nav-item">
-                  <Link to="/" className="nav-item_link">
-                    Home
-                  </Link>
-                </li>
-                <li
-                  className="nav-item"
-                  onMouseEnter={() => setShowDropdown(true)}
-                  onMouseLeave={() => setShowDropdown(false)}
-                >
-                  <span className="dropdown-label  nav-item_link">
-                    Programs
-                  </span>
-                  {showDropdown && <ProgramsDropDown />}
-                </li>
-                <li className="nav-item">
-                  <Link to="/finance-tools" className="nav-item_link">
-                    Finance Tools
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/contact" className="nav-item_link">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-            <div className="nav-right">
-              <LanguageSwitcher />
+    <header className="shadow-md bg-white">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between py-4">
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="site-logo" className="h-8 md:h-10" />
+          </Link>
 
-              {!token ? (
-                <Link to="/signin" className="signin-link">
-                  Sign in
+          {/* Desktop nav */}
+          <nav className="hidden md:block">
+            <ul className="flex items-center gap-6">
+              <li>
+                <Link
+                  to="/"
+                  className="block px-4 py-2 text-[15px] font-semibold text-gray-600 hover:text-teal-600"
+                >
+                  Home
                 </Link>
-              ) : (
-                <div className="flex gap-5">
-                  <Link
-                    to="/user-profile"
-                    className="text-2xl text-blue-600 hover:text-blue-800"
-                  >
-                    <FaUserCircle />
-                  </Link>
-                  <button
-                    onClick={handleLogout}
-                    className="text-red-500 hover:text-red-700 text-2xl"
-                    title="Logout"
-                  >
-                    <FiLogOut />
-                  </button>
-                </div>
-              )}
-            </div>
+              </li>
+              <li
+                className="relative"
+                onMouseEnter={() => setShowDropdown(true)}
+                onMouseLeave={() => setShowDropdown(false)}
+              >
+                <span className="block px-4 py-2 text-[15px] font-semibold text-gray-600 hover:text-teal-600 cursor-pointer">
+                  Programs
+                </span>
+                {showDropdown && (
+                  <ul className="absolute left-0 mt-2 w-72 bg-white border border-gray-300 rounded-md shadow-md z-50">
+                    <ProgramsDropDown />
+                  </ul>
+                )}
+              </li>
+              <li>
+                <Link
+                  to="/finance-tools"
+                  className="block px-4 py-2 text-[15px] font-semibold text-gray-600 hover:text-teal-600"
+                >
+                  Finance Tools
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="block px-4 py-2 text-[15px] font-semibold text-gray-600 hover:text-teal-600"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* Right side */}
+          <div className="flex items-center gap-6">
+            <LanguageSwitcher />
+
+            {!token ? (
+            <Link
+            to="/signin"
+            className="hidden md:block bg-teal-600 text-white px-3 py-1 rounded-lg font-semibold text-xs md:text-sm lg:text-base md:px-6 md:py-2"
+          >
+            Sign in
+          </Link>
+            ) : (
+              <div className="flex gap-4 items-center">
+                <Link
+                  to="/user-profile"
+                  className="text-2xl text-blue-600 hover:text-blue-800"
+                >
+                  <FaUserCircle />
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="hidden md:block text-red-500 hover:text-red-700 text-2xl "
+                  title="Logout"
+                >
+                  <FiLogOut />
+                </button>
+              </div>
+            )}
+
+            {/* Hamburger (faqat mobile) */}
+            <button
+              className="md:hidden text-3xl text-gray-700"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <HiX /> : <HiMenu />}
+            </button>
           </div>
         </div>
 
-        {/* <div className="header-left">
-    <Link to="/" className="logo">
-    YourLogo
-    </Link>
-    </div>
-    
-    <div className="header-center">
-    <Link to="/" className="nav-item">Home</Link>
-    <div className="nav-item dropdown">
-    <span className="dropdown-title">Programs ▾</span>
-    <div className="dropdown-menu">
-    <Link to="/programs/international" className="dropdown-item">International Programs</Link>
-    <Link to="/programs/specialized" className="dropdown-item">Specialized Courses</Link>
-    <Link to="/programs/islamic-finance" className="dropdown-item">Islamic Finance Course</Link>
-    <Link to="/programs/certification" className="dropdown-item">Certification Program</Link>
-    </div>
-    </div>
-    <Link to="/finance-tools" className="nav-item">Finance Tools</Link>
-    <Link to="/contact" className="nav-item">Contact</Link>
-    </div>
-    
-    <div className="header-right">
-    <Link to="/signin" className="nav-item">Sign In</Link>
-  </div> */}
-      </header>
-    </>
+        {/* Mobile nav */}
+        {mobileMenuOpen && (
+          <nav className="md:hidden bg-white border-t shadow-md">
+            <ul className="flex flex-col gap-2 p-4">
+              <li>
+                <Link
+                  to="/"
+                  className="block px-4 py-2 text-[15px] font-semibold text-gray-600 hover:text-teal-600"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Home
+                </Link>
+              </li>
+              <li
+                className="relative"
+                onMouseEnter={() => setShowDropdown(true)}
+                onMouseLeave={() => setShowDropdown(false)}
+              >
+                <span className="block px-4 py-2 text-[15px] font-semibold text-gray-600 hover:text-teal-600 cursor-pointer">
+                  Programs
+                </span>
+                {showDropdown && (
+                  <ul className="absolute left-0 mt-2 w-72 bg-white border border-gray-300 rounded-md shadow-md z-50">
+                    <ProgramsDropDown />
+                  </ul>
+                )}
+              </li>
+              
+              <li>
+                <Link
+                  to="/contact"
+                  className="block px-4 py-2 text-[15px] font-semibold text-gray-600 hover:text-teal-600"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+              </li>
+              <li className="border-t pt-2">
+                {!token ? (
+                  <Link
+                    to="/signin"
+                    className="bg-teal-600 text-white px-6 py-2 rounded-lg font-semibold inline-block"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Sign in
+                  </Link>
+                ) : (
+                  <button
+                    onClick={() => {
+                      handleLogout();
+                      setMobileMenuOpen(false);
+                    }}
+                    className="text-red-500 hover:text-red-700 font-semibold"
+                  >
+                    Logout
+                  </button>
+                )}
+              </li>
+            </ul>
+          </nav>
+        )}
+      </div>
+    </header>
   );
 };

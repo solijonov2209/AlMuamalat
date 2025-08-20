@@ -1,46 +1,35 @@
-import { useQuery } from 'react-query';
-import { Link } from 'react-router-dom';
-import { request } from '../services/Request';
+import { useQuery } from "react-query";
+import { Link } from "react-router-dom";
+import { request } from "../services/Request";
 
 export function ProgramsDropDown() {
-  const { data, isloading } = useQuery({
-    queryKey: 'courseData',
+  const { data, isLoading } = useQuery({
+    queryKey: "courseData",
     queryFn: async () => {
-      const data = await request.get('/courses/main');
+      const data = await request.get("/courses/main");
       return data?.data?.data;
     },
   });
 
+  if (isLoading) return null;
+
   return (
-    <ul className="dropdown-list">
+    <ul className="w-72 bg-white border border-gray-400 rounded-md shadow-md p-3">
       {data?.map((course, index) => (
-        <li key={index} className="dropdown-item">
+        <li
+          key={index}
+          className={`${
+            index !== data.length - 1 ? "border-b border-gray-300" : ""
+          }`}
+        >
           <Link
-            className="dropdown-item_link"
             to={`/programs/${course?.course_id}`}
+            className="block text-[15px] font-semibold text-gray-600 py-2 hover:text-teal-600 transition-colors"
           >
             {course.name_en}
           </Link>
         </li>
       ))}
-
-      {/* 
-         
-      <li clasName="dropdown-item">
-        <Link className="dropdown-item_link" to="/programs/specialized">
-          Specialized courses
-        </Link>
-      </li>
-      <li clasName="dropdown-item">
-        <Link className="dropdown-item_link" to="/programs/literacy">
-          Islamic Finance Literacy Course
-        </Link>
-      </li>
-      <li clasName="dropdown-item">
-        <Link className="dropdown-item_link" to="/programs/certification">
-          Certification program
-        </Link>
-      </li> */}
     </ul>
   );
 }

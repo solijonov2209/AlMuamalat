@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import uz_logo from '../assets/svg/uz.svg';
-import gb_logo from '../assets/svg/gb.svg';
+import React, { useState } from "react";
+import uz_logo from "../assets/svg/uz.svg";
+import gb_logo from "../assets/svg/gb.svg";
 
 const languages = [
   {
-    code: 'uz',
-    label: 'UZB',
+    code: "uz",
+    label: "UZB",
     flag: uz_logo,
   },
   {
-    code: 'en',
-    label: 'ENG',
+    code: "en",
+    label: "ENG",
     flag: gb_logo,
   },
 ];
@@ -22,26 +22,32 @@ const LanguageSwitcher = () => {
   const handleSelect = (lang) => {
     setSelectedLang(lang);
     setOpen(false);
-    console.log('Tanlangan til:', lang.code);
+    console.log("Tanlangan til:", lang.code);
     // i18n.changeLanguage(lang.code);
   };
 
   return (
-    <div className="language-switcher" onClick={() => setOpen(!open)}>
-      <div className="selected">
-        <img src={selectedLang.flag} alt={selectedLang.code} />
-        <span>{selectedLang.label}</span>
+    <div className="relative">
+      {/* Selected language */}
+      <div
+        className="flex items-center gap-2 cursor-pointer border border-gray-300 rounded-md px-2 py-1 bg-white hover:bg-gray-100"
+        onClick={() => setOpen(!open)}
+      >
+        <img src={selectedLang.flag} alt={selectedLang.code} className="w-5 h-5" />
+        <span className="text-sm font-medium">{selectedLang.label}</span>
       </div>
+
+      {/* Dropdown */}
       {open && (
-        <div className="dropdown">
+        <div className="absolute right-0 mt-2 w-28 bg-white border border-gray-300 rounded-md shadow-md z-20">
           {languages.map((lang) => (
             <div
               key={lang.code}
-              className="option"
+              className="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-gray-100"
               onClick={() => handleSelect(lang)}
             >
-              <img src={lang.flag} alt={lang.code} />
-              <span>{lang.label}</span>
+              <img src={lang.flag} alt={lang.code} className="w-5 h-5" />
+              <span className="text-sm font-medium">{lang.label}</span>
             </div>
           ))}
         </div>

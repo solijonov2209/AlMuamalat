@@ -185,7 +185,7 @@ const onSubmit = () => {
                 className="inline-block mr-2"
               />
               <span className=" text-red-700  font-normal text-[15px] md:text-[18px] leading-[100%] tracking-[-0.02em] align-middle">
-               Course price: {(price)?price:"kursga qabul mavjud emas"}
+               Course price: {(price)?(price+ " so'm"):"kursga qabul mavjud emas"} 
               </span>
             </div>
           </div>
