@@ -5,7 +5,7 @@ import App from './App.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { QueryClient, QueryClientProvider } from 'react-query';
-
+import './i18n.jsx';
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')).render(

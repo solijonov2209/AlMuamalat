@@ -5,17 +5,19 @@ import Klarna from '../../../assets/svg/klarna.svg';
 import Skrill from '../../../assets/svg/Skrill.svg';
 import Stripe from '../../../assets/svg/Stripe.svg';
 import Amazon from '../../../assets/svg/Amazon.svg';
+import { useTranslation } from 'react-i18next';
 
 export const Partners = () => {
   const partners = [Amerikan, WesternUnion, Klarna, Skrill, Stripe, Amazon];
 
   // Uzluksiz ko‘rinish uchun ikki marta takrorlanadi
   const repeatedPartners = [...partners, ...partners];
+  const { t } = useTranslation();
 
   return (
     <div className="max-w-7xl m-auto bg-white py-6 md:py-12 overflow-hidden">
       <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 md:mb-12 text-center">
-        Our Partners and Clients
+        {t('partners.title')}
       </h2>
 
       <div className="relative w-full overflow-hidden group">

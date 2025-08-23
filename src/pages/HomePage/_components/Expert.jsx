@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   FaTelegram,
   FaInstagram,
@@ -11,30 +11,28 @@ import Person1 from '../../../assets/team-expert-man.png';
 import Person2 from '../../../assets/team-expert-man.png';
 
 export const Expert = () => {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
 
   const teamMembers = [
     {
       id: 1,
-      name: 'Dr. Mezbah Uddin Ahmed',
-      description:
-        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+      name: t('expert.members.0.name'),
+      description: t('expert.members.0.description'),
       icons: [FaTelegram, FaInstagram, FaFacebook, FaLinkedin],
       image: Person,
     },
     {
       id: 2,
-      name: 'John Smith',
-      description:
-        'Financial expert with 15 years of experience in Islamic banking and investment strategies. Specialized in Sharia-compliant portfolio management.',
+      name: t('expert.members.1.name'),
+      description: t('expert.members.1.description'),
       icons: [FaTelegram, FaInstagram, FaFacebook, FaLinkedin],
       image: Person1,
     },
     {
       id: 3,
-      name: 'Sarah Johnson',
-      description:
-        'Management consultant with expertise in organizational development for Islamic financial institutions. Focused on ethical business practices.',
+      name: t('expert.members.2.name'),
+      description: t('expert.members.2.description'),
       icons: [FaTelegram, FaInstagram, FaFacebook, FaLinkedin],
       image: Person2,
     },
@@ -69,12 +67,10 @@ export const Expert = () => {
     <div className="py-8 md:py-16 bg-white overflow-hidden">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-2xl md:text-4xl font-bold text-center text-gray-900 mb-6 md:mb-8">
-          Our Expert Team
+          {t('expert.title')}
         </h1>
         <p className="text-center text-gray-600 mb-8 md:mb-16 max-w-3xl mx-auto text-sm md:text-lg px-4">
-          Our team consists of seasoned professionals with extensive experience
-          in Islamic finance and management. Each member brings a unique set of
-          skills and expertise.
+          {t('expert.subtitle')}
         </p>
 
         <div className="relative">
@@ -135,7 +131,9 @@ export const Expert = () => {
               <button
                 key={index}
                 onClick={() => goToIndex(index)}
-                className={`h-2 w-8 md:w-12 rounded-full transition-all duration-300 ${activeIndex === index ? 'bg-[#009688]' : 'bg-gray-300'}`}
+                className={`h-2 w-8 md:w-12 rounded-full transition-all duration-300 ${
+                  activeIndex === index ? 'bg-[#009688]' : 'bg-gray-300'
+                }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
@@ -149,7 +147,15 @@ export const Expert = () => {
 // Reusable Components
 const DesktopSideCard = ({ member, position, isEdge, onClick }) => (
   <div
-    className={`hidden md:block absolute ${position === 'left' ? 'left-[-80px]' : 'right-[-80px]'} w-[200px] md:w-[280px] transition-all duration-500 transform ${isEdge ? 'opacity-30 blur-sm' : 'opacity-70 blur-sm'} ${position === 'left' ? '-translate-x-4 hover:translate-x-0' : 'translate-x-4 hover:translate-x-0'} hover:opacity-90 hover:blur-none cursor-pointer`}
+    className={`hidden md:block absolute ${
+      position === 'left' ? 'left-[-80px]' : 'right-[-80px]'
+    } w-[200px] md:w-[280px] transition-all duration-500 transform ${
+      isEdge ? 'opacity-30 blur-sm' : 'opacity-70 blur-sm'
+    } ${
+      position === 'left'
+        ? '-translate-x-4 hover:translate-x-0'
+        : 'translate-x-4 hover:translate-x-0'
+    } hover:opacity-90 hover:blur-none cursor-pointer`}
     onClick={onClick}
   >
     <div className="bg-[#D2E6E4] p-4 md:p-6 rounded-xl shadow-md h-[350px] md:h-[400px] flex flex-col">
@@ -201,7 +207,7 @@ const MemberImage = ({ image, name }) => (
     <img
       src={image}
       alt={name}
-      className="w-full h-full object-contain  md:object-cover"
+      className="w-full h-full object-contain md:object-cover"
     />
   </div>
 );

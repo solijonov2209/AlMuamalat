@@ -1,15 +1,17 @@
-// components/Card.jsx
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const Card = ({ title, description, icon }) => {
+const Card = ({ titleKey, descriptionKey, icon }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="service-card">
       <div className="services-card-top">
-        <img src={icon} alt={title} className="icon" />
-        <h3 className="service-card_title">{title}</h3>
+        <img src={icon} alt={t(titleKey)} className="icon" />
+        <h3 className="service-card_title">{t(titleKey)}</h3>
       </div>
-      <p className="service-description">{description}</p>
-      <button className="learn-more">Learn more</button>
+      <p className="service-description">{t(descriptionKey)}</p>
+      <button className="learn-more">{t('services.learnMore')}</button>
     </div>
   );
 };

@@ -2,19 +2,18 @@
 import React, { useContext } from 'react';
 import { ServicesContext } from './ServicesContext';
 import Card from './ServicesCard';
+import { useTranslation } from 'react-i18next';
 
 export const Services = () => {
   const { services } = useContext(ServicesContext);
+  const { t } = useTranslation();
 
   return (
     <div className="services">
       <div className="container">
         <div className="services-title_wrapper">
-          <h2 className="services-title">Our Services</h2>
-          <p className="services-subtitle">
-            Expert guidance for managing funds in alignment with Islamic
-            principles, helping you make informed, halal investment decisions.
-          </p>
+          <h2 className="services-title">{t('services.sectionTitle')}</h2>
+          <p className="services-subtitle">{t('services.sectionSubtitle')}</p>
         </div>
 
         <div className="services-bottom">
@@ -22,8 +21,8 @@ export const Services = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                title={service.title}
-                description={service.description}
+                titleKey={service.titleKey}
+                descriptionKey={service.descriptionKey}
                 icon={service.icon}
               />
             ))}

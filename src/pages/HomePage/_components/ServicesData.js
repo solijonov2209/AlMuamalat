@@ -4,42 +4,38 @@ import educationLogo from '../../../assets/svg/Education and training icon.svg';
 import forIslamicBankLogo from '../../../assets/svg/forIslamicBanklogo.svg';
 import capitalMarketLogo from '../../../assets/svg/Market icon.svg';
 import shariahAuditLogo from '../../../assets/svg/shariahAudit.svg';
+
 const ServicesData = [
   {
-    title: 'Islamic Fund Management',
-    description:
-      'We assist retail and institutional clients in managing their funds in accordance with Islamic principles, providing practical advice for making halal investments.',
+    titleKey: 'services.islamicFund.title',
+    descriptionKey: 'services.islamicFund.description',
     icon: islamicFoundLogo,
   },
   {
-    title: 'International Relations',
-    description:
-      'We establish connections with local and international organizations to promote Islamic financial systems and create partnerships that support financial inclusion.',
+    titleKey: 'services.internationalRelations.title',
+    descriptionKey: 'services.internationalRelations.description',
     icon: internationalRelationsLogo,
   },
   {
-    title: 'Education and Training',
-    description:
-      'We offer short-term training courses, seminars, and conferences conducted by experts, along with study tours to leading Islamic financial institutions.',
+    titleKey: 'services.educationTraining.title',
+    descriptionKey: 'services.educationTraining.description',
     icon: educationLogo,
   },
   {
-    title: 'For Islamic Banks',
-    description:
-      'We provide experienced consulting on the establishment and management of Islamic banks and branches. We support the development of competitive financial products and services based on Shariah principles.',
+    titleKey: 'services.forIslamicBanks.title',
+    descriptionKey: 'services.forIslamicBanks.description',
     icon: forIslamicBankLogo,
   },
   {
-    title: 'Islamic Capital Market',
-    description:
-      'We provide expert advice on the Islamic capital market, including Shariah-compliant investment products, sukuk issuance, and ethical portfolio management.',
+    titleKey: 'services.capitalMarket.title',
+    descriptionKey: 'services.capitalMarket.description',
     icon: capitalMarketLogo,
   },
   {
-    title: 'Shariah Compliance Audit',
-    description:
-      'We provide Shariah supervision and audit services, examining the compliance of business models with Shariah principles.',
+    titleKey: 'services.shariahAudit.title',
+    descriptionKey: 'services.shariahAudit.description',
     icon: shariahAuditLogo,
   },
 ];
+
 export default ServicesData;

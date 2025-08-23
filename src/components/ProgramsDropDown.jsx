@@ -1,12 +1,12 @@
-import { useQuery } from "react-query";
-import { Link } from "react-router-dom";
-import { request } from "../services/Request";
+import { useQuery } from 'react-query';
+import { Link } from 'react-router-dom';
+import { request } from '../services/Request';
 
 export function ProgramsDropDown() {
   const { data, isLoading } = useQuery({
-    queryKey: "courseData",
+    queryKey: 'courseData',
     queryFn: async () => {
-      const data = await request.get("/courses/main");
+      const data = await request.get('/courses/main');
       return data?.data?.data;
     },
   });
@@ -19,7 +19,7 @@ export function ProgramsDropDown() {
         <li
           key={index}
           className={`${
-            index !== data.length - 1 ? "border-b border-gray-300" : ""
+            index !== data.length - 1 ? 'border-b border-gray-300' : ''
           }`}
         >
           <Link

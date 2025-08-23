@@ -2,17 +2,18 @@ import React from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Logo } from '../../../assets/svg/Logo';
 import SignImage from '../../../assets/signinimg.png';
 import useRegister from '../../../hook/useRegister';
 import { Controller, useForm } from 'react-hook-form';
 
 export const Register = () => {
+  const { t } = useTranslation();
   const { control, register, handleSubmit } = useForm();
   const { handleRegister } = useRegister();
 
   const onSubmit = (data) => {
-    console.log(data);
     const { full_name, password, phone_number } = data;
     handleRegister({ full_name, password, phone_number });
   };
@@ -28,16 +29,16 @@ export const Register = () => {
             </Link>
 
             <h1 className="mt-10 lg:mt-[105px] mb-0 font-inter font-normal text-[40px] lg:text-[86px] leading-[100%] tracking-[4%]">
-              Get started
+              {t('register.title')}
             </h1>
 
             <p className="font-inter text-[18px] lg:text-[26px] font-normal leading-[100%] text-[#8f8f8f] mb-10 lg:mb-20 mt-0">
-              Already have an account?{' '}
+              {t('register.haveAccount')}{' '}
               <Link
                 to="/signin"
                 className="font-inter text-[18px] lg:text-[26px] font-bold leading-[100%] text-[#009688] no-underline"
               >
-                Sign In
+                {t('register.signIn')}
               </Link>
             </p>
 
@@ -49,7 +50,7 @@ export const Register = () => {
               <input
                 type="text"
                 {...register('full_name')}
-                placeholder="Enter your name"
+                placeholder={t('register.name')}
                 className="w-full h-[50px] rounded-md border border-gray-300 px-4 pr-12 bg-[url('../../assets/svg/user.svg')] bg-no-repeat bg-[length:24px] bg-[position:calc(100%-18px)_center] text-base"
               />
 
@@ -57,7 +58,7 @@ export const Register = () => {
               <input
                 type="password"
                 {...register('password')}
-                placeholder="Enter your password"
+                placeholder={t('register.password')}
                 className="px-4 py-[18px] border border-[#8f8f8f] rounded-lg bg-[url('../../assets/svg/EmailIcon.svg')] bg-no-repeat bg-[length:24px] bg-[position:calc(100%-18px)_center]"
               />
 
@@ -75,7 +76,7 @@ export const Register = () => {
                       height: '50px',
                       fontSize: '16px',
                     }}
-                    placeholder="Telefon raqam"
+                    placeholder={t('register.phone')}
                     onChange={(value) => field.onChange(value)}
                   />
                 )}
@@ -86,7 +87,7 @@ export const Register = () => {
                 type="submit"
                 className="py-[18px] bg-[#009688] text-white rounded-lg text-center outline-none border-none"
               >
-                Log In
+                {t('register.submit')}
               </button>
             </form>
           </div>
@@ -96,11 +97,10 @@ export const Register = () => {
             <img
               className="w-[280px] h-[280px] xl:w-[545px] xl:h-[535px] object-contain"
               src={SignImage}
-              alt="image"
+              alt={t('register.imageAlt')}
             />
             <p className="font-inter font-bold text-[22px] xl:text-[36px] leading-[32px] xl:leading-[50px] tracking-[5%] text-center mt-6">
-              Welcome to Al Muamalat – Empowering Your Journey in Islamic
-              Finance
+              {t('register.welcomeMessage')}
             </p>
           </div>
         </div>

@@ -1,11 +1,14 @@
 import React from 'react';
 import Slider from 'react-slick';
 import studentPicture from '../../../assets/say-student-pic.png';
+import { useTranslation } from 'react-i18next';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 export const StudentSay = () => {
+  const { t } = useTranslation();
+
   const settings = {
     dots: true,
     infinite: true,
@@ -31,45 +34,40 @@ export const StudentSay = () => {
   const studentComments = [
     {
       name: 'Finlay Kirk',
-      job: 'Web designer',
-      comment:
-        'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College.',
+      job: t('studentSay.comments.0.job'),
+      comment: t('studentSay.comments.0.comment'),
       img: studentPicture,
     },
     {
       name: 'Aisha Yusuf',
-      job: 'UX researcher',
-      comment:
-        'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College.',
+      job: t('studentSay.comments.1.job'),
+      comment: t('studentSay.comments.1.comment'),
       img: studentPicture,
     },
     {
       name: 'John Doe',
-      job: 'Frontend Developer',
-      comment:
-        'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College.',
+      job: t('studentSay.comments.2.job'),
+      comment: t('studentSay.comments.2.comment'),
       img: studentPicture,
     },
     {
       name: 'Fatima Ali',
-      job: 'Product Manager',
-      comment:
-        'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College.',
+      job: t('studentSay.comments.3.job'),
+      comment: t('studentSay.comments.3.comment'),
       img: studentPicture,
     },
   ];
 
   return (
     <section className="py-10">
-      <div className=" container max-w-7xl mx-auto px-4">
+      <div className="container max-w-7xl mx-auto px-4">
         {/* Top section */}
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            What students say
+            {t('studentSay.title')}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">
-            Our team consists of seasoned professionals with extensive
-            experience in Islamic finance and management.
+            {t('studentSay.subtitle')}
           </p>
         </div>
 

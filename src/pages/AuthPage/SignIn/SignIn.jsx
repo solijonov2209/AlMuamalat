@@ -1,6 +1,6 @@
-// project sign in
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Logo } from '../../../assets/svg/Logo';
 import SignImage from '../../../assets/signinimg.png';
 import { Controller, useForm } from 'react-hook-form';
@@ -8,11 +8,11 @@ import useRegister from '../../../hook/useRegister';
 import PhoneInput from 'react-phone-input-2';
 
 export const SignIn = () => {
+  const { t } = useTranslation();
   const { control, register, handleSubmit } = useForm();
   const { handleLogin } = useRegister();
 
   const onSubmit = (data) => {
-    console.log(data);
     const { password, phone_number } = data;
     handleLogin({ password, phone_number });
   };
@@ -28,7 +28,7 @@ export const SignIn = () => {
             </Link>
 
             <h1 className="mt-10 lg:mt-[105px] mb-0 font-inter font-normal text-[40px] lg:text-[86px] leading-[100%] tracking-[4%]">
-              Get started
+              {t('signIn.title')}
             </h1>
 
             <form
@@ -49,7 +49,7 @@ export const SignIn = () => {
                       height: '50px',
                       fontSize: '16px',
                     }}
-                    placeholder="Telefon raqam"
+                    placeholder={t('signIn.phonePlaceholder')}
                     onChange={(value) => field.onChange(value)}
                   />
                 )}
@@ -59,7 +59,7 @@ export const SignIn = () => {
               <input
                 type="password"
                 {...register('password')}
-                placeholder="Password"
+                placeholder={t('signIn.password')}
                 className="px-4 py-[18px] border border-[#8f8f8f] rounded-lg"
               />
 
@@ -68,14 +68,14 @@ export const SignIn = () => {
                 type="submit"
                 className="py-[18px] bg-[#009688] text-white rounded-lg text-center outline-none border-none"
               >
-                Sign In
+                {t('signIn.submit')}
               </button>
 
               <Link
                 to="/register"
                 className="block no-underline font-inter font-normal text-[20px] lg:text-[26px] text-[#8f8f8f] leading-[100%] text-center m-0"
               >
-                Create a new account !
+                {t('signIn.createAccount')}
               </Link>
             </form>
           </div>
@@ -85,11 +85,10 @@ export const SignIn = () => {
             <img
               className="w-[300px] h-[300px] xl:w-[545px] xl:h-[535px] object-contain"
               src={SignImage}
-              alt="image"
+              alt={t('signIn.imageAlt')}
             />
             <p className="font-inter font-bold text-[24px] xl:text-[36px] leading-[34px] xl:leading-[50px] tracking-[5%] text-center mt-6">
-              Welcome to Al Muamalat – Empowering Your Journey in Islamic
-              Finance
+              {t('signIn.welcomeMessage')}
             </p>
           </div>
         </div>

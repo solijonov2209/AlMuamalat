@@ -1,0 +1,289 @@
+{
+  "home": "Home",
+  "programs": "Programs",
+  "finance_tools": "Finance Tools",
+  "contact-h": "Contact",
+  "sign_in": "Sign in",
+
+  "hero_subtitle": "Seeking Knowledge is an Obligation in Islam",
+  "hero_title": "Enhance Your Understanding of Islamic Ethics with Al-Muamalat",
+  "hero_button": "Students’ opinion",
+  "hero_student_count": "250k",
+  "hero_student_text": "Assisted Student",
+
+  "services": {
+    "sectionTitle": "Our Services",
+    "sectionSubtitle": "Expert guidance for managing funds in alignment with Islamic principles, helping you make informed, halal investment decisions.",
+    "learnMore": "Learn more",
+    "islamicFund": {
+      "title": "Islamic Fund Management",
+      "description": "We assist retail and institutional clients in managing their funds in accordance with Islamic principles, providing practical advice for making halal investments."
+    },
+    "internationalRelations": {
+      "title": "International Relations",
+      "description": "We establish connections with local and international organizations to promote Islamic financial systems and create partnerships that support financial inclusion."
+    },
+    "educationTraining": {
+      "title": "Education and Training",
+      "description": "We offer short-term training courses, seminars, and conferences conducted by experts, along with study tours to leading Islamic financial institutions."
+    },
+    "forIslamicBanks": {
+      "title": "For Islamic Banks",
+      "description": "We provide experienced consulting on the establishment and management of Islamic banks and branches. We support the development of competitive financial products and services based on Shariah principles."
+    },
+    "capitalMarket": {
+      "title": "Islamic Capital Market",
+      "description": "We provide expert advice on the Islamic capital market, including Shariah-compliant investment products, sukuk issuance, and ethical portfolio management."
+    },
+    "shariahAudit": {
+      "title": "Shariah Compliance Audit",
+      "description": "We provide Shariah supervision and audit services, examining the compliance of business models with Shariah principles."
+    }
+  },
+
+  "expert": {
+    "title": "Our Expert Team",
+    "subtitle": "Our team consists of seasoned professionals with extensive experience in Islamic finance and management. Each member brings a unique set of skills and expertise.",
+    "members": [
+      {
+        "name": "Dr. Mezbah Uddin Ahmed",
+        "description": "It is a long established fact that a reader will be distracted by the readable content..."
+      },
+      {
+        "name": "John Smith",
+        "description": "Financial expert with 15 years of experience in Islamic banking and investment strategies. Specialized in Sharia-compliant portfolio management."
+      },
+      {
+        "name": "Sarah Johnson",
+        "description": "Management consultant with expertise in organizational development for Islamic financial institutions. Focused on ethical business practices."
+      }
+    ]
+  },
+
+  "partners": {
+    "title": "Our Partners and Clients"
+  },
+
+  "ourMedia": {
+    "title": "Our Media",
+    "description": "Our team consists of seasoned professionals with extensive experience in Islamic finance and management. Each member brings a unique set of skills and expertise.",
+    "showcaseTitle": "Our media showcase",
+    "cards": {
+      "card1": "Why Islamic finance?",
+      "card2": "What makes Islamic finance unique?",
+      "card3": "How is risk managed in Islamic finance?"
+    }
+  },
+
+  "studentSay": {
+    "title": "What students say",
+    "subtitle": "Our team consists of seasoned professionals with extensive experience in Islamic finance and management.",
+    "comments": [
+      {
+        "name": "Finlay Kirk",
+        "job": "Web designer",
+        "comment": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College."
+      },
+      {
+        "name": "Aisha Yusuf",
+        "job": "UX researcher",
+        "comment": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College."
+      },
+      {
+        "name": "John Doe",
+        "job": "Frontend Developer",
+        "comment": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College."
+      },
+      {
+        "name": "Fatima Ali",
+        "job": "Product Manager",
+        "comment": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College."
+      }
+    ]
+  },
+
+  "askedQuestions": {
+    "title": "Frequently asked questions",
+    "subtitle": "If you have any further questions, please contact us",
+    "faqs": [
+      {
+        "question": "Will I receive lifetime access to the courses?",
+        "answer": "Our platform includes downloadable resources such as PDFs and worksheets to help you study and teach effectively."
+      },
+      {
+        "question": "Can I use the materials for community teaching?",
+        "answer": "Our platform includes downloadable resources such as PDFs and worksheets to help you study and teach effectively."
+      },
+      {
+        "question": "Is there a free trial for the courses?",
+        "answer": "Yes, we offer a 7-day free trial for all new users."
+      },
+      {
+        "question": "Who can benefit from these courses?",
+        "answer": "Teachers, students, and lifelong learners across all levels."
+      },
+      {
+        "question": "Are there certification options?",
+        "answer": "Yes, certificates are awarded upon course completion."
+      }
+    ]
+  },
+
+  "consultation": {
+    "title": "Workshops and Spiritual Development",
+    "description": "Participate in our weekly workshops focused on Islamic studies and spiritual growth. These sessions are designed to help you strengthen your connection with faith and acquire essential skills for daily life",
+    "formTitle": "Free consultation",
+    "formDescription": "Leave your phone number, and we will reach out to provide you with complete information about our courses.",
+    "namePlaceholder": "Name",
+    "phonePlaceholder": "Phone number",
+    "checkbox": "I agree to the use of my personal information for consultation purposes.",
+    "submit": "Submit"
+  },
+
+  "footer": {
+    "home": "Home",
+    "about": "About",
+    "financeTools": "Finance Tools",
+    "contact": "Contact",
+    "copyright": "Copyright Satyam Studio"
+  },
+
+  "contact": {
+    "title": "Let’s Talk",
+    "description": "Have some big idea or brand to develop and need help? Then reach out, we'd love to hear about your project and provide help.",
+    "email": {
+      "title": "Email"
+    },
+    "socials": {
+      "title": "Socials",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "facebook": "Facebook"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "servicePlaceholder": "Select project type",
+      "budgetPlaceholder": "Select project budget",
+      "message": "Message",
+      "submit": "Submit",
+      "submitting": "Submitting...",
+      "error": "Error: data not sent",
+      "errors": {
+        "name": "Name is required",
+        "email": "Email is required",
+        "service": "Service is required",
+        "budget": "Budget is required",
+        "message": "Message is required"
+      }
+    }
+  },
+
+  "paymentServices": {
+    "title": "Our Services",
+    "item1": {
+      "title": "Space for creative ideas",
+      "desc": "Cyber Square nourishes young minds to build and realize their future vision."
+    },
+    "item2": {
+      "title": "Engaging and fun curriculum",
+      "desc": "We provide exciting activities so children can learn programming concepts with joy."
+    },
+    "item3": {
+      "title": "Professional teaching methods",
+      "desc": "We expose kids to real programming languages and professional tools."
+    }
+  },
+  "payment": {
+    "title": "Payment",
+    "item1": "Space for creative ideas",
+    "item2": "Engaging and fun curriculum",
+    "item3": "Professional teaching methods",
+    "item4": "Learn from AI & Data Science experts",
+    "item5": "Courses in IT, NFT, and more",
+    "item6": "UK certification upon completion",
+    "item7": "Personalized one-to-one training",
+    "coursePrice": "Course price:",
+    "notAvailable": "not available",
+    "button": "Purchase Now",
+    "loginError": "Please sign up to purchase the course!"
+  },
+  "coursesCarousel": {
+    "title": "Most Popular Courses",
+    "subtitle": "Expert guidance for managing funds in alignment with Islamic principles, helping you make informed, halal investment decisions.",
+    "categories": {
+      "design": "Design",
+      "business": "Business"
+    },
+    "cardDesc": "Various versions have evolved..."
+  },
+  "international": {
+    "heroDescription": "Additional information about this course will be available soon.",
+    "learnTitle": "What will you learn?",
+    "learnList": [
+      "Basics of Islamic finance",
+      "Principles of international finance",
+      "Sharia-compliant investment directions",
+      "Risk management methods"
+    ],
+    "whyTitle": "Why choose",
+    "whyList": [
+      "Experienced instructors",
+      "Practical lessons and assignments",
+      "Online support",
+      "Opportunity to get international certification"
+    ],
+    "orderTitle": "Course structure",
+    "videoTitle": "Video lessons",
+    "videoText": "Lessons are posted on the platform in the form of videos, which can be viewed anytime and anywhere. Video lessons are updated.",
+    "assignmentsTitle": "Assignments",
+    "assignmentsText": "Test tasks are given at the end of the module. Only students who successfully pass the test will be able to access the lessons in the next module."
+  },
+  "userProfile": {
+    "profile": "Profil",
+    "courses": "Kurslar"
+  },
+  "userCourses": {
+    "categories": {
+      "design": "Design",
+      "business": "Business"
+    },
+    "description": "Various versions have evolved...",
+    "alt": "Course image"
+  },
+  "userInfo": {
+    "avatarAlt": "User avatar",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Your First Name",
+    "phoneNumber": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "address": "Address",
+    "addressPlaceholder": "Enter Your Address",
+    "gender": "Gender",
+    "genderPlaceholder": "Enter Your Gender",
+    "password": "Profile password",
+    "passwordPlaceholder": "Change your password",
+    "save": "Save",
+    "saving": "Saving..."
+  },
+  "signIn": {
+    "title": "Get started",
+    "phonePlaceholder": "Phone number",
+    "password": "Password",
+    "submit": "Sign In",
+    "createAccount": "Create a new account !",
+    "imageAlt": "Sign In image",
+    "welcomeMessage": "Welcome to Al Muamalat – Empowering Your Journey in Islamic Finance"
+  },
+  "register": {
+    "title": "Get started",
+    "haveAccount": "Already have an account?",
+    "signIn": "Sign In",
+    "name": "Enter your name",
+    "password": "Enter your password",
+    "phone": "Phone number",
+    "submit": "Register",
+    "imageAlt": "Register image",
+    "welcomeMessage": "Welcome to Al Muamalat – Empowering Your Journey in Islamic Finance"
+  }
+}

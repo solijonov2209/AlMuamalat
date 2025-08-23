@@ -1,6 +1,10 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 export const UserProfile = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-16">
       <div className="container">
@@ -16,7 +20,7 @@ export const UserProfile = () => {
                 }`
               }
             >
-              Profile
+              {t('userProfile.profile')}
             </NavLink>
           </li>
           <li>
@@ -30,7 +34,7 @@ export const UserProfile = () => {
                 }`
               }
             >
-              Courses
+              {t('userProfile.courses')}
             </NavLink>
           </li>
         </ul>

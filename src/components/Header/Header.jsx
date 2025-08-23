@@ -1,23 +1,25 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/svg/Logo.svg";
-import { ProgramsDropDown } from "../ProgramsDropDown";
-import LanguageSwitcher from "../LanguageSelector";
-import { FaUserCircle } from "react-icons/fa";
-import { FiLogOut } from "react-icons/fi";
-import { HiMenu, HiX } from "react-icons/hi";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import logo from '../../assets/svg/Logo.svg';
+import { ProgramsDropDown } from '../ProgramsDropDown';
+import LanguageSwitcher from '../LanguageSelector';
+import { FaUserCircle } from 'react-icons/fa';
+import { FiLogOut } from 'react-icons/fi';
+import { HiMenu, HiX } from 'react-icons/hi';
+
+import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const [token, setToken] = useState(localStorage.getItem("testUserToken"));
+  const [token, setToken] = useState(localStorage.getItem('testUserToken'));
   const navigate = useNavigate();
-
+  const { t } = useTranslation();
   const handleLogout = () => {
-    localStorage.removeItem("testUserToken");
+    localStorage.removeItem('testUserToken');
     setToken(null);
-    navigate("/");
+    navigate('/');
   };
 
   return (
@@ -37,7 +39,7 @@ export const Header = () => {
                   to="/"
                   className="block px-4 py-2 text-[15px] font-semibold text-gray-600 hover:text-teal-600"
                 >
-                  Home
+                  {t('home')}
                 </Link>
               </li>
               <li
@@ -46,7 +48,7 @@ export const Header = () => {
                 onMouseLeave={() => setShowDropdown(false)}
               >
                 <span className="block px-4 py-2 text-[15px] font-semibold text-gray-600 hover:text-teal-600 cursor-pointer">
-                  Programs
+                  {t('programs')}
                 </span>
                 {showDropdown && (
                   <ul className="absolute left-0 mt-2 w-72 bg-white border border-gray-300 rounded-md shadow-md z-50">
@@ -59,7 +61,7 @@ export const Header = () => {
                   to="/finance-tools"
                   className="block px-4 py-2 text-[15px] font-semibold text-gray-600 hover:text-teal-600"
                 >
-                  Finance Tools
+                  {t('finance_tools')}
                 </Link>
               </li>
               <li>
@@ -67,7 +69,7 @@ export const Header = () => {
                   to="/contact"
                   className="block px-4 py-2 text-[15px] font-semibold text-gray-600 hover:text-teal-600"
                 >
-                  Contact
+                  {t('contact-h')}
                 </Link>
               </li>
             </ul>
@@ -78,12 +80,12 @@ export const Header = () => {
             <LanguageSwitcher />
 
             {!token ? (
-            <Link
-            to="/signin"
-            className="hidden md:block bg-teal-600 text-white px-3 py-1 rounded-lg font-semibold text-xs md:text-sm lg:text-base md:px-6 md:py-2"
-          >
-            Sign in
-          </Link>
+              <Link
+                to="/signin"
+                className="hidden md:block bg-teal-600 text-white px-3 py-1 rounded-lg font-semibold text-xs md:text-sm lg:text-base md:px-6 md:py-2"
+              >
+                {t('sign_in')}
+              </Link>
             ) : (
               <div className="flex gap-4 items-center">
                 <Link
@@ -139,7 +141,7 @@ export const Header = () => {
                   </ul>
                 )}
               </li>
-              
+
               <li>
                 <Link
                   to="/contact"

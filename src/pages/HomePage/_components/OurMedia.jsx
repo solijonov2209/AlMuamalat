@@ -3,21 +3,25 @@ import Women from '../../../assets/Rectangle4.png';
 import Man from '../../../assets/Rectangle5.png';
 import Boy from '../../../assets/Rectangle6.png';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+
 export const OurMedia = () => {
+  const { t } = useTranslation();
+
   const cards = [
     {
       id: 1,
-      title: 'Why Islamic finance?',
+      title: t('ourMedia.cards.card1'), // Why Islamic finance?
       imageUrl: Women,
     },
     {
       id: 2,
-      title: 'What makes Islamic finance unique?',
+      title: t('ourMedia.cards.card2'), // What makes Islamic finance unique?
       imageUrl: Man,
     },
     {
       id: 3,
-      title: 'How is risk managed in Islamic finance?',
+      title: t('ourMedia.cards.card3'), // How is risk managed in Islamic finance?
       imageUrl: Boy,
     },
   ];
@@ -25,28 +29,26 @@ export const OurMedia = () => {
   return (
     <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className=" max-w-7xl mx-auto container">
-        {/* Our Media section - Centered */}
-        <div className="mb-12  text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Media</h2>
+        {/* Our Media section */}
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            {t('ourMedia.title')}
+          </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Our team consists of seasoned professionals with extensive
-            experience in Islamic finance and management. Each member brings a
-            unique set of skills and expertise.
+            {t('ourMedia.description')}
           </p>
         </div>
 
         {/* Title and arrows */}
         <div className="flex justify-between items-center mb-8 flex-wrap gap-4">
           <h3 className="text-3xl font-bold text-gray-900">
-            Our media showcase
+            {t('ourMedia.showcaseTitle')}
           </h3>
           <div className="flex space-x-3 ">
             <button className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#009688] transition bg-[#ECF3F6] hover:text-white text-[#000000] cursor-pointer">
-              {/* Triangle arrow pointing left */}
               <FaArrowLeft />
             </button>
             <button className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#009688] transition bg-[#ECF3F6] hover:text-white text-[#000000] cursor-pointer">
-              {/* Triangle arrow pointing right */}
               <FaArrowRight />
             </button>
           </div>
@@ -59,7 +61,6 @@ export const OurMedia = () => {
               key={card.id}
               className="group w-full h-[516px] rounded-[10px] border border-gray-300 overflow-hidden relative cursor-pointer"
             >
-              {/* Image with zoom on hover */}
               <div className="w-full h-full overflow-hidden">
                 <img
                   src={card.imageUrl}
@@ -68,15 +69,12 @@ export const OurMedia = () => {
                 />
               </div>
 
-              {/* Overlay */}
               <div className="absolute inset-0 bg-black/20 z-0" />
 
-              {/* Title with padding to avoid button overlap */}
               <div className="absolute bottom-5 left-5 pr-30 text-white text-lg font-semibold z-10">
                 {card.title}
               </div>
 
-              {/* Play button */}
               <button
                 className="absolute bottom-4 right-4 w-12 h-12 rounded-full flex items-center justify-center z-10 
                   bg-white group-hover:bg-[#2198FF] transition-all duration-300 cursor-pointer

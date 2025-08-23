@@ -1,0 +1,289 @@
+{
+  "home": "Bosh sahifa",
+  "programs": "Dasturlar",
+  "finance_tools": "Moliya",
+  "contact-h": "Bog'lanish",
+  "sign_in": "Kirish",
+
+  "hero_subtitle": "Ilm izlash – Islomda farzdir",
+  "hero_title": "Al-Muamalat bilan islomiy axloqni chuqurroq o‘rganing",
+  "hero_button": "Talabalar fikri",
+  "hero_student_count": "250 ming",
+  "hero_student_text": "O‘qitilgan talabalar",
+
+  "services": {
+    "sectionTitle": "Bizning Xizmatlar",
+    "sectionSubtitle": "Islomiy tamoyillarga mos ravishda mablag‘larni boshqarishda ekspert maslahatlari, sizni ongli va halol investitsiya qarorlarini qabul qilishga yordam beradi.",
+    "learnMore": "Batafsil",
+    "islamicFund": {
+      "title": "Islomiy Fond Menejmenti",
+      "description": "Biz chakana va institutsional mijozlarga o‘z mablag‘larini islomiy tamoyillarga muvofiq boshqarishda yordam beramiz va halol investitsiyalar uchun amaliy maslahatlar beramiz."
+    },
+    "internationalRelations": {
+      "title": "Xalqaro Hamkorlik",
+      "description": "Biz islomiy moliya tizimini targ‘ib qilish uchun mahalliy va xalqaro tashkilotlar bilan hamkorlik aloqalarini o‘rnatamiz va moliyaviy inklyuziyani qo‘llab-quvvatlaymiz."
+    },
+    "educationTraining": {
+      "title": "Ta’lim va Treninglar",
+      "description": "Biz qisqa muddatli kurslar, seminarlar va konferensiyalarni tashkil qilamiz, shuningdek yetakchi islomiy moliya institutlariga o‘quv safari uyushtiramiz."
+    },
+    "forIslamicBanks": {
+      "title": "Islomiy Banklar Uchun",
+      "description": "Biz islomiy banklar va filiallarni tashkil etish va boshqarishda professional maslahatlar beramiz. Shuningdek, shariat tamoyillariga asoslangan raqobatbardosh moliyaviy mahsulotlar va xizmatlarni ishlab chiqishni qo‘llab-quvvatlaymiz."
+    },
+    "capitalMarket": {
+      "title": "Islomiy Kapital Bozori",
+      "description": "Biz islomiy kapital bozori bo‘yicha maslahatlar beramiz, jumladan shariatga mos investitsiya mahsulotlari, sukuk chiqarish va etik portfel boshqaruvi."
+    },
+    "shariahAudit": {
+      "title": "Shariatga Muvofiqlik Auditi",
+      "description": "Biz shariatga muvofiqlikni nazorat va audit xizmatlarini taqdim etamiz, biznes modellarini shariat tamoyillari asosida baholaymiz."
+    }
+  },
+
+  "expert": {
+    "title": "Bizning Mutaxassislar Jamoamiz",
+    "subtitle": "Jamoamiz islomiy moliya va menejment bo‘yicha katta tajribaga ega mutaxassislardan iborat. Har bir a’zo o‘ziga xos bilim va ko‘nikmalarni olib keladi.",
+    "members": [
+      {
+        "name": "Dr. Mezbah Uddin Ahmed",
+        "description": "Ma’lumki, o‘quvchi sahifaga qaraganda matnga chalg‘ishi mumkin. Shuning uchun Lorem Ipsum foydalaniladi..."
+      },
+      {
+        "name": "John Smith",
+        "description": "15 yillik tajribaga ega moliyaviy ekspert. Islomiy bank va investitsiya strategiyalarida ixtisoslashgan. Shariatga mos portfel boshqaruvi bo‘yicha mutaxassis."
+      },
+      {
+        "name": "Sarah Johnson",
+        "description": "Islomiy moliya institutlari uchun tashkiliy rivojlanishda tajribaga ega konsalting mutaxassisi. Etik biznes amaliyotiga e’tibor qaratadi."
+      }
+    ]
+  },
+
+  "partners": {
+    "title": "Bizning hamkorlar va mijozlar"
+  },
+
+  "ourMedia": {
+    "title": "Bizning Media",
+    "description": "Bizning jamoamiz islomiy moliya va menejment bo‘yicha katta tajribaga ega mutaxassislardan iborat. Har bir a’zo o‘ziga xos ko‘nikma va tajribaga ega.",
+    "showcaseTitle": "Bizning media namoyishimiz",
+    "cards": {
+      "card1": "Nega islomiy moliya?",
+      "card2": "Islomiy moliyani o‘ziga xos qiladigan narsa nima?",
+      "card3": "Islomiy moliyada xavf qanday boshqariladi?"
+    }
+  },
+
+  "studentSay": {
+    "title": "Talabalar fikri",
+    "subtitle": "Bizning jamoamiz islomiy moliya va menejment bo‘yicha katta tajribaga ega mutaxassislardan iborat.",
+    "comments": [
+      {
+        "name": "Finlay Kirk",
+        "job": "Veb dizayner",
+        "comment": "Ommabop fikrlardan farqli o‘laroq, Lorem Ipsum shunchaki tasodifiy matn emas. Uning ildizlari miloddan avvalgi 45-yilda yozilgan klassik lotin adabiyotiga borib taqaladi, ya’ni u 2000 yildan ortiq tarixga ega. Bu matnni Hampden-Sydney kollejidagi lotin tili professori Richard McClintock topgan."
+      },
+      {
+        "name": "Aisha Yusuf",
+        "job": "UX tadqiqotchi",
+        "comment": "Ommabop fikrlardan farqli o‘laroq, Lorem Ipsum shunchaki tasodifiy matn emas. Uning ildizlari miloddan avvalgi 45-yilda yozilgan klassik lotin adabiyotiga borib taqaladi, ya’ni u 2000 yildan ortiq tarixga ega. Bu matnni Hampden-Sydney kollejidagi lotin tili professori Richard McClintock topgan."
+      },
+      {
+        "name": "John Doe",
+        "job": "Frontend dasturchi",
+        "comment": "Ommabop fikrlardan farqli o‘laroq, Lorem Ipsum shunchaki tasodifiy matn emas. Uning ildizlari miloddan avvalgi 45-yilda yozilgan klassik lotin adabiyotiga borib taqaladi, ya’ni u 2000 yildan ortiq tarixga ega. Bu matnni Hampden-Sydney kollejidagi lotin tili professori Richard McClintock topgan."
+      },
+      {
+        "name": "Fatima Ali",
+        "job": "Mahsulot menejeri",
+        "comment": "Ommabop fikrlardan farqli o‘laroq, Lorem Ipsum shunchaki tasodifiy matn emas. Uning ildizlari miloddan avvalgi 45-yilda yozilgan klassik lotin adabiyotiga borib taqaladi, ya’ni u 2000 yildan ortiq tarixga ega. Bu matnni Hampden-Sydney kollejidagi lotin tili professori Richard McClintock topgan."
+      }
+    ]
+  },
+
+  "askedQuestions": {
+    "title": "Ko‘p beriladigan savollar",
+    "subtitle": "Agar qo‘shimcha savollaringiz bo‘lsa, biz bilan bog‘laning",
+    "faqs": [
+      {
+        "question": "Kurslarga umrboqiy kirish huquqini olamanmi?",
+        "answer": "Platformamizda PDF va ish daftarlar kabi yuklab olinadigan materiallar mavjud bo‘lib, ular sizga samarali o‘qish va o‘qitishda yordam beradi."
+      },
+      {
+        "question": "Materiallarni jamoat o‘qitishida ishlatishim mumkinmi?",
+        "answer": "Platformamizda PDF va ish daftarlar kabi yuklab olinadigan materiallar mavjud bo‘lib, ular sizga samarali o‘qish va o‘qitishda yordam beradi."
+      },
+      {
+        "question": "Kurslar uchun bepul sinov muddati bormi?",
+        "answer": "Ha, biz barcha yangi foydalanuvchilarga 7 kunlik bepul sinov muddatini taqdim etamiz."
+      },
+      {
+        "question": "Bu kurslardan kimlar foyda olishi mumkin?",
+        "answer": "O‘qituvchilar, talabalar va barcha darajadagi bilim olishni xohlovchilar."
+      },
+      {
+        "question": "Sertifikat olish imkoniyati bormi?",
+        "answer": "Ha, kursni yakunlaganingizdan so‘ng sertifikat taqdim etiladi."
+      }
+    ]
+  },
+
+  "consultation": {
+    "title": "Treninglar va ma'naviy rivojlanish",
+    "description": "Islomiy bilimlar va ma'naviy o‘sishga bag‘ishlangan haftalik treninglarimizda qatnashing. Ushbu mashg‘ulotlar sizga e’tiqod bilan aloqangizni mustahkamlash va kundalik hayot uchun zarur ko‘nikmalarni egallashga yordam beradi.",
+    "formTitle": "Bepul maslahat",
+    "formDescription": "Telefon raqamingizni qoldiring, biz siz bilan bog‘lanib kurslarimiz haqida to‘liq ma’lumot beramiz.",
+    "namePlaceholder": "Ism",
+    "phonePlaceholder": "Telefon raqam",
+    "checkbox": "Maslahat maqsadida shaxsiy ma’lumotlarimdan foydalanishga roziman.",
+    "submit": "Yuborish"
+  },
+
+  "footer": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "financeTools": "Moliyaviy vositalar",
+    "contact": "Aloqa",
+    "copyright": "Mualliflik huquqi Satyam Studio"
+  },
+
+  "contact": {
+    "title": "Keling, suhbatlashamiz",
+    "description": "Katta g‘oya yoki brendingizni rivojlantirmoqchimisiz va yordam kerakmi? Biz bilan bog‘laning, loyihangiz haqida eshitish va yordam berishdan mamnun bo‘lamiz.",
+    "email": {
+      "title": "Elektron pochta"
+    },
+    "socials": {
+      "title": "Ijtimoiy tarmoqlar",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "facebook": "Facebook"
+    },
+    "form": {
+      "name": "Ism",
+      "email": "Email",
+      "servicePlaceholder": "Loyiha turini tanlang",
+      "budgetPlaceholder": "Loyiha budjetini tanlang",
+      "message": "Xabar",
+      "submit": "Yuborish",
+      "submitting": "Yuborilmoqda...",
+      "error": "Xatolik: ma’lumot yuborilmadi",
+      "errors": {
+        "name": "Ism kiritilishi shart",
+        "email": "Email kiritilishi shart",
+        "service": "Xizmat turi tanlanishi shart",
+        "budget": "Budjet tanlanishi shart",
+        "message": "Xabar kiritilishi shart"
+      }
+    }
+  },
+  "paymentServices": {
+    "title": "Bizning xizmatlarimiz",
+    "item1": {
+      "title": "Ijodiy g‘oyalar uchun joy",
+      "desc": "Cyber Square yoshlarning kelajagini aniq ko‘rishi uchun yordam beradi. Biz ularni orzularini tahlil qilish va amalga oshirishga yo‘naltiramiz."
+    },
+    "item2": {
+      "title": "Qiziqarli va interaktiv dastur",
+      "desc": "Maqsadimiz bolalar dasturlash tushunchalarini mustaqil o‘zlashtira olishlari uchun qiziqarli faoliyatlarni yaratishdir."
+    },
+    "item3": {
+      "title": "Professional o‘qitish usullari",
+      "desc": "Biz bolalarni haqiqiy dasturlash tillari va professional vositalar bilan tanishtiramiz."
+    }
+  },
+  "payment": {
+    "title": "To‘lov",
+    "item1": "Ijodiy g‘oyalar uchun joy",
+    "item2": "Qiziqarli va interaktiv dastur",
+    "item3": "Professional o‘qitish usullari",
+    "item4": "AI va Data Science mutaxassislaridan o‘rganish",
+    "item5": "IT, NFT va boshqa kurslar",
+    "item6": "Tugallashda Britaniya sertifikati",
+    "item7": "Shaxsiy 1-to-1 trening",
+    "coursePrice": "Kurs narxi:",
+    "notAvailable": "kursga qabul mavjud emas",
+    "button": "Hoziroq sotib olish",
+    "loginError": "Iltimos, kursni sotib olish uchun ro‘yxatdan o‘ting!"
+  },
+
+  "coursesCarousel": {
+    "title": "Eng mashhur kurslar",
+    "subtitle": "Islomiy tamoyillar asosida mablag‘ni boshqarish bo‘yicha ekspert maslahatlari, sizga halol investitsiya qarorlarini qabul qilishga yordam beradi.",
+    "categories": {
+      "design": "Dizayn",
+      "business": "Biznes"
+    },
+    "cardDesc": "Turli versiyalar ishlab chiqilgan..."
+  },
+  "international": {
+    "heroDescription": "Bu kurs haqida qo'shimcha ma'lumot tez orada joylanadi.",
+    "learnTitle": "Siz nimalarni o'rganasiz?",
+    "learnList": [
+      "Islomiy moliya asoslari",
+      "Xalqaro moliya tamoyillari",
+      "Shariatga mos investitsiya yo'nalishlari",
+      "Risklarni boshqarish usullari"
+    ],
+    "whyTitle": "Nega tanlashingiz kerak",
+    "whyList": [
+      "Tajribali ustozlar",
+      "Amaliy darslar va topshiriqlar",
+      "Onlayn qo'llab-quvvatlash",
+      "Xalqaro sertifikat olish imkoniyati"
+    ],
+    "orderTitle": "Kurs tartibi",
+    "videoTitle": "Video darslar",
+    "videoText": "Darslar platformada video shaklida joylashtiriladi. Ularni istalgan vaqtda, istalgan joyda ko‘rish mumkin. Video darslar yangilanib boriladi.",
+    "assignmentsTitle": "Topshiriqlar",
+    "assignmentsText": "Har bir modul oxirida test topshiriqlari beriladi. Testni muvaffaqiyatli topshirgan talabginagina keyingi modul darslariga kira oladi."
+  },
+  "userProfile": {
+    "profile": "Profil",
+    "courses": "Kurslar"
+  },
+  "userCourses": {
+    "categories": {
+      "design": "Dizayn",
+      "business": "Biznes"
+    },
+    "description": "Turli versiyalar shakllangan...",
+    "alt": "Kurs rasmi"
+  },
+  "userInfo": {
+    "avatarAlt": "Foydalanuvchi rasmi",
+    "fullName": "F.I.SH",
+    "fullNamePlaceholder": "Ismingizni kiriting",
+    "phoneNumber": "Telefon raqami",
+    "phonePlaceholder": "Telefon raqamingizni kiriting",
+    "address": "Manzil",
+    "addressPlaceholder": "Manzilingizni kiriting",
+    "gender": "Jinsi",
+    "genderPlaceholder": "Jinsingizni kiriting",
+    "password": "Profil paroli",
+    "passwordPlaceholder": "Parolingizni o‘zgartiring",
+    "save": "Saqlash",
+    "saving": "Saqlanmoqda..."
+  },
+  "signIn": {
+    "title": "Boshlash",
+    "phonePlaceholder": "Telefon raqam",
+    "password": "Parol",
+    "submit": "Kirish",
+    "createAccount": "Yangi akkaunt yarating!",
+    "imageAlt": "Tizimga kirish rasmi",
+    "welcomeMessage": "Al Muamalat ga xush kelibsiz – Islomiy moliya sayohatingizni qo‘llab-quvvatlaymiz"
+  },
+  "register": {
+    "title": "Ro‘yxatdan o‘tish",
+    "haveAccount": "Sizda allaqachon akkaunt bormi?",
+    "signIn": "Kirish",
+    "name": "Ismingizni kiriting",
+    "password": "Parolingizni kiriting",
+    "phone": "Telefon raqam",
+    "submit": "Ro‘yxatdan o‘tish",
+    "imageAlt": "Ro‘yxatdan o‘tish rasmi",
+    "welcomeMessage": "Al Muamalat ga xush kelibsiz – Islomiy moliya sayohatingizni qo‘llab-quvvatlaymiz"
+  }
+}

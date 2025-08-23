@@ -1,11 +1,12 @@
-// CoursesCarousel.jsx
 import React from 'react';
 import Slider from 'react-slick';
+import { useTranslation } from 'react-i18next';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import coursePhoto1 from '../../assets/course-1.svg';
 import coursePhoto2 from '../../assets/course-2.svg';
 import coursePhoto3 from '../../assets/course-3.svg';
+
 const courses = [
   {
     id: 1,
@@ -14,7 +15,7 @@ const courses = [
     reviews: 20,
     price: 500,
     category: 'Design',
-    image: coursePhoto1, // You can replace with actual image
+    image: coursePhoto1,
   },
   {
     id: 2,
@@ -35,8 +36,12 @@ const courses = [
     image: coursePhoto3,
   },
 ];
+
 const bgColors = ['bg-[#A9A8F6]', 'bg-[#FF7F5080]', 'bg-[#CCB4FF80]'];
+
 export const CoursesCarousel = () => {
+  const { t } = useTranslation();
+
   const settings = {
     dots: true,
     infinite: true,
@@ -53,12 +58,14 @@ export const CoursesCarousel = () => {
       },
     ],
   };
+
   return (
     <div className="py-10 px-4 md:px-20">
-      <h2 className="text-2xl font-bold text-center">Most Popular Course</h2>
-      <p className=" max-w-md  text-center mx-auto text-gray-500 mt-2 mb-5">
-        Expert guidance for managing funds in alignment with Islamic principles,
-        helping you make informed, halal investment decisions.
+      <h2 className="text-2xl font-bold text-center">
+        {t('coursesCarousel.title')}
+      </h2>
+      <p className="max-w-md text-center mx-auto text-gray-500 mt-2 mb-5">
+        {t('coursesCarousel.subtitle')}
       </p>
 
       <Slider {...settings} className="mt-10">
@@ -66,16 +73,20 @@ export const CoursesCarousel = () => {
           <div key={course.id} className="px-4">
             <div className="bg-white rounded-lg p-4 shadow-md mt-3 mb-5">
               <div
-                className={`w-full h-40  flex items-center justify-center ${bgColors[course.id % 3]} rounded`}
+                className={`w-full h-40 flex items-center justify-center ${
+                  bgColors[course.id % 3]
+                } rounded`}
               >
                 <img src={course.image} alt={course.title} className="h-24" />
               </div>
               <div className="mt-4">
-                <span className="text-xs  bg-gray-200 text-gray-700 px-2 py-1 rounded-full">
-                  {course.category}
+                <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">
+                  {t(
+                    `coursesCarousel.categories.${course.category.toLowerCase()}`
+                  )}
                 </span>
                 <h3 className="font-semibold text-lg mt-2">
-                  Various versions have evolved...
+                  {t('coursesCarousel.cardDesc')}
                 </h3>
                 <div className="flex items-center text-yellow-500 mt-2">
                   {'★'.repeat(course.rating)}
